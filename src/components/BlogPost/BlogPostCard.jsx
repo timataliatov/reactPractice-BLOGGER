@@ -6,7 +6,7 @@ const BlogPostCard = ({ post }) => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 glow-effect fade-in">
       <img
-        src={`https://source.unsplash.com/random/400x200?${post.category}`}
+        src={post.photoUrl}
         alt={post.title}
         className="w-full h-48 object-cover"
       />
@@ -39,6 +39,7 @@ BlogPostCard.propTypes = {
     excerpt: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
+    photoUrl: PropTypes.string.isRequired,
   }).isRequired,
 };
 
